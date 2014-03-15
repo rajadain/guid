@@ -1,7 +1,12 @@
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
 .guid-row {
     margin-top: 10px;
 }
 
 .guid-list {
     font-size: 36px;
+    font-family: 'Source Code Pro', monospace;
 }
