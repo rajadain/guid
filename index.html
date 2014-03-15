@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GUID by @rajadain</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/app.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>GUID <small>by <a href="http://twitter.com/rajadain">@rajadain</a></small></h1>
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-inline" role="form" name="mainform">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="nQuantity">Number of GUIDs</label>
+                            <div class="input-group">
+                                <input class="form-control" type="number" id="nQuantity" placeholder="How many GUIDs?" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-flash"></span> Generate</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="checkbox">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="bUppercase" /> Uppercase
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="bDashes" /> Dashes
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="bBraces" /> Braces 
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="bNewLines" /> New Lines 
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="bCommaSeparated" /> Comma Separated 
+                            </label>
+                        </div>
+                        <button class="btn btn-primary pull-right"><span class="glyphicon glyphicon-export"></span> Copy</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row guid-row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled text-center guid-list">
+                        <li>525fe0c4-91d2-454b-8b49-8af882fb2d41</li>
+                        <li>bbbd9f13-4010-4d10-a21a-53b4bd5bd861</li>
+                        <li>1a954aa7-be32-4eaa-9fe4-9a048baeb798</li>
+                        <li>103464b8-9d25-4d12-9afd-45dbde750e50</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/guid.js"></script>
+    </body>
+</html>
