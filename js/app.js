@@ -19,10 +19,13 @@ $(function(){
 
   var GuidList = Backbone.Collection.extend({
     model: Guid,
+    seperator: "\n",
     copy: function(options) {
-        return this.models.reduce(function(memo, guid) {
-          return memo + guid.getDisplay(options) + "\n";
-        }, '');
+        var result = [];
+        this.models.map(function(guid) {
+          return result.push(guid.getDisplay(options));
+        });
+        return result.join(this.seperator);
     }
   });
   
