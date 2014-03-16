@@ -60,13 +60,15 @@ $(function(){
       'click #bUppercase': 'render',
       'click #bDashes': 'render',
       'click #bBraces': 'render',
-      'click #bCommas': 'render',
-      'click #aCopy': 'copy'
+      'click #bCommas': 'render'
     },
 
     initialize: function() {
       this.listenTo(Guids, 'reset', this.render);
       this.setOptions();
+
+      ZeroClipboard.config({moviePath: 'js/ZeroClipboard.swf'});
+      this.clipper = new ZeroClipboard(this.$('#aCopy'));
     },
 
     generate: function() {
@@ -83,6 +85,8 @@ $(function(){
         var view = new GuidView({model: guid});
         guidList.append(view.render(this.options).el);
       }, this);
+
+      this.clipper.setText(Guids.copy(this.options));
     },
 
     copy: function() {
