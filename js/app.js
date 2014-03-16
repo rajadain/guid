@@ -47,6 +47,7 @@ $(function(){
     bDashes: $('#bDashes'),
     bBraces: $('#bBraces'),
     bCommas: $('#bCommas'),
+    aCopy: $('#aCopy'),
     
     options: {
       bUppercase: false,
@@ -68,7 +69,12 @@ $(function(){
       this.setOptions();
 
       ZeroClipboard.config({moviePath: 'js/ZeroClipboard.swf'});
-      this.clipper = new ZeroClipboard(this.$('#aCopy'));
+      this.clipper = new ZeroClipboard(aCopy);
+      this.clipper.on('load', function(clipper) {
+        clipper.on('complete', function(clipper) {
+          $('#aCopy').prop('disabled', true).html('<span class="glyphicon glyphicon-ok"></span> Copied')
+        });
+      });
     },
 
     generate: function() {
@@ -87,6 +93,7 @@ $(function(){
       }, this);
 
       this.clipper.setText(Guids.copy(this.options));
+      this.aCopy.removeProp('disabled').html('<span class="glyphicon glyphicon-export"></span> Copy</button>');
     },
 
     copy: function() {
