@@ -48,13 +48,11 @@ $(function(){
     bBraces: $('#bBraces'),
     bCommas: $('#bCommas'),
     
-    options: function() {
-      return {
-        bUppercase: this.bUppercase.prop('checked'),
-        bDashes: this.bDashes.prop('checked'),
-        bBraces: this.bBraces.prop('checked'),
-        bCommas: this.bCommas.prop('checked')
-      };
+    options: {
+      bUppercase: false,
+      bDashes: true,
+      bBraces: false,
+      bCommas: false
     },
 
     events: {
@@ -68,6 +66,7 @@ $(function(){
 
     initialize: function() {
       this.listenTo(Guids, 'reset', this.render);
+      this.setOptions();
     },
 
     generate: function() {
@@ -76,18 +75,28 @@ $(function(){
     },
 
     render: function() {
+      this.setOptions();
 
       var guidList = this.$('#guid-list');
       guidList.empty();
       Guids.each(function(guid) {
         var view = new GuidView({model: guid});
-        guidList.append(view.render(this.options()).el);
+        guidList.append(view.render(this.options).el);
       }, this);
     },
 
     copy: function() {
-      var guids = Guids.copy(this.options());
+      var guids = Guids.copy(this.options);
       console.log(guids);
+    },
+
+    setOptions: function() {
+      this.options = {
+        bUppercase: this.bUppercase.prop('checked'),
+        bDashes: this.bDashes.prop('checked'),
+        bBraces: this.bBraces.prop('checked'),
+        bCommas: this.bCommas.prop('checked')
+      };
     }
   });
 
