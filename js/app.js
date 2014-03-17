@@ -75,6 +75,8 @@ $(function(){
           $('#aCopy').prop('disabled', true).html('<span class="glyphicon glyphicon-ok"></span> Copied')
         });
       });
+
+      this.generate();
     },
 
     generate: function() {
