@@ -15,34 +15,39 @@
                 </div>
             </div>
             <div class="row">
-                <form class="form-inline" role="form" name="mainform">
-                    <div class="col-md-3">
+                <div class="col-md-4">
+                    <form class="form-horizontal" role="form" name="inputform">
                         <div class="form-group">
-                            <label class="sr-only" for="nQuantity">Number of GUIDs</label>
-                            <div class="input-group">
-                                <input class="form-control" type="number" id="nQuantity" placeholder="How many GUIDs?" />
+                            <label class="col-md-5 control-label" for="nQuantity">Number of GUIDs</label>
+                            <div class="col-md-6 input-group">
+                                <input class="form-control" type="number" id="nQuantity" value="5" />
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button" id="aGenerate"><span class="glyphicon glyphicon-flash"></span> Generate</button>
                                 </span>
                             </div>
                         </div>
+                    </form>
+                </div>
+                    <div class="col-md-5">
+                        <form class="form-inline" role="form" name="optionform">
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="bUppercase" /> Uppercase
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="bDashes" checked="checked" /> Dashes
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="bBraces" /> Braces
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="bCommas" /> Commas
+                                </label>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-md-9">
-                        <div class="checkbox">
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="bUppercase" /> Uppercase
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="bDashes" checked="checked" /> Dashes
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="bBraces" /> Braces 
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" id="bCommas" /> Commas 
-                            </label>
-                        </div>
-                        <button class="btn btn-primary pull-right" type="button" id="aCopy"><span class="glyphicon glyphicon-export"></span> Copy</button>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-block pull-right" type="button" id="aCopy"><span class="glyphicon glyphicon-export"></span> Copy</button>
                     </div>
                 </form>
             </div>
