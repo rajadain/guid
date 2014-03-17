@@ -3,7 +3,7 @@ guid
 
 A simple online client-side GUID generator in Backbone.
 
-I made this as an exercise in [BackboneJS](http://backbonejs.org), and because I use GUIDs a lot everyday at work. The tools I usually used are [GuidGenerator](http://www.guidgenerator.com/) and [FileFormat](http://www.fileformat.info/tool/guid.htm). While both are splendid tools, I use them with such frequency that having to wait for a page refresh and select the GUIDs to copy them was too cumbersome. This project offers a Copy button made using [ZeroClipboard](http://zeroclipboard.org) and client side GUID generation using [@broofa's technique](http://stackoverflow.com/a/2117523) to make a quick and functional user interface.
+I made this as an exercise in [BackboneJS](http://backbonejs.org), and because I use GUIDs a lot everyday at work. The tools I usually used were [GuidGenerator](http://www.guidgenerator.com/) and [FileFormat](http://www.fileformat.info/tool/guid.htm). While both are splendid tools, I used them with such frequency that having to wait for a page refresh and select the GUIDs to copy them was too cumbersome. This project offers a Copy button made using [ZeroClipboard](http://zeroclipboard.org) and client side GUID generation using [@broofa's technique](http://stackoverflow.com/a/2117523) to make a quick and functional user interface.
 
 Credits
 -------
