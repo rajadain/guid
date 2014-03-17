@@ -98,11 +98,6 @@ $(function(){
       this.aCopy.removeProp('disabled').html('<span class="glyphicon glyphicon-export"></span> Copy</button>');
     },
 
-    copy: function() {
-      var guids = Guids.copy(this.options);
-      console.log(guids);
-    },
-
     setOptions: function() {
       this.options = {
         bUppercase: this.bUppercase.prop('checked'),
