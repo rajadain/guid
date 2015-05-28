@@ -1,0 +1,29 @@
+{
+  "name": "guid",
+  "version": "2.0.0",
+  "description": "Simple GUID generator in BackboneJS",
+  "dependencies": {
+    "backbone": "^1.2.0",
+    "bootstrap": "^3.3.4",
+    "jquery": "^2.1.4",
+    "zeroclipboard": "^2.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "gulp": "^3.8.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajadain/guid.git"
+  },
+  "keywords": [
+    "guid",
+    "uuid"
+  ],
+  "author": "Terence Tuhinanshu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajadain/guid/issues"
+  },
+  "homepage": "https://github.com/rajadain/guid#readme"
+}
