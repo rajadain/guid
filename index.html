@@ -8,7 +8,71 @@
     </head>
     <body>
         <div id="guid-app" class="container">
-
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>GUID <small>by <a href="http://twitter.com/rajadain">@rajadain</a></small></h1>
+                </div>
+            </div>
+            <form role="form" name="inputform" onsubmit="return false;">
+                <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="nQuantity">Quantity</label>
+                        <div class="input-group">
+                            <input class="form-control" type="number" id="nQuantity" value="1" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit" id="aGenerate">
+                                    <span class="glyphicon glyphicon-flash"></span> Generate
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="sCase">Case</label>
+                        <select class="form-control" id="sCase">
+                            <option value="true" selected>Uppercase</option>
+                            <option value="false">Lowercase</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="sDashes">Separator</label>
+                        <select class="form-control" id="sDashes">
+                            <option value="">None</option>
+                            <option value="-" selected>- - hyphen</option>
+                            <option value=".">. - period</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="sBraces">Enclosure</label>
+                        <select class="form-control" id="sBraces">
+                            <option value="" selected>None</option>
+                            <option value="()">() - parentheses</option>
+                            <option value="{}">{} - braces</option>
+                            <option value="[]">[] - brackets</option>
+                            <option value="''">'' - single quotes</option>
+                            <option value='""'>"" - double quotes</option>
+                            <option value="``">`` - backticks</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="sCommas">Terminator</label>
+                        <select class="form-control" id="sCommas">
+                            <option value="" selected>None</option>
+                            <option value=",">, - comma</option>
+                            <option value=";">; - semicolon</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Copy to Clipboard</label>
+                        <button class="btn btn-primary btn-block pull-right" type="button" id="aCopy"><span class="glyphicon glyphicon-export"></span> Copy</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row guid-row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled text-center" id="guid-list">
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <script src="dist/js/main.js" />
